@@ -1,0 +1,30 @@
+body {
+    background-color: #272727;
+    font-style: italic;
+    color: white;
+    margin: 0;
+    
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+
+.imageBG {
+    display: flex;
+    background-image: url(detectiveImage.png);
+    background-size: cover; 
+    filter: grayscale(1);
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+    padding: 300px 0; 
+      
+}

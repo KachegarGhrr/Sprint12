@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Шерлок разгадывает</title>
+</head>
+<body>
+    <div class="imageBG">
+        <div>
+            <h2>Шерлок разгадывает...</h2>
+            <h3 id="revealedText"></h3>
+        </div>
+    </div>
+
+    <script>
+        const originalText = "Мой старый принцип расследования состоит в том, чтобы исключить все явно невозможные предположения. Тогда то, что остается, является истиной, какой бы неправдоподобной она ни казалась.";
+        let currentText = "";
+        const words = originalText.split(" ");
+        let wordIndex = 0;
+
+        function revealText() {
+            if (wordIndex < words.length) {
+                currentText += words[wordIndex] + ' ';
+                document.getElementById("revealedText").innerText = currentText.trim();
+                wordIndex++;
+            } else {
+                clearInterval(intervalId);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const intervalId = setInterval(revealText, 1000);
+        });
+    </script>
+</body>
+</html>
